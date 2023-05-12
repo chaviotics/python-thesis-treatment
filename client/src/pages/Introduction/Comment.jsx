@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import CodeEditor from '../../components/CodeEditor';
+import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
-import NoteForScroll from '../../components/NoteForScroll';
+// import NoteForScroll from '../../components/NoteForScroll';
 
 function Comment() {
   return (
@@ -28,31 +29,44 @@ function Comment() {
           it does. They are ignored by the computer when the code is ran, but
           they help you and others understand what your code is doing.
         </Typography>
-        <Typography mt="2rem" mb="1rem">
+        <Typography mt="2rem" mb="2rem">
           In Python, you can add a comment by starting a line with the{' '}
           <code>#</code> symbol. Everything after the <code>#</code> symbol on
           that line will be treated as a comment. Check out the code editor
           below:
         </Typography>
-      </Box>
 
-      <CodeEditor
-        content={`# This is a comment
+        <CodeEditorWithOutput
+          content={`# This is a comment
 # It won't be run by the computer
 # But it can help explain what's going on
 
 # For example:
 
-print("Hello awesome person!") # This line prints a greeting to the console
-`}
-        height="250px"
-        width="100%"
-      />
+print("Hello awesome person!") 
+# The line above prints a greeting to the console`}
+          codeWidth={70}
+          outputWidth={30}
+          height="300px"
+          title="true"
+        />
 
-      {/* Space */}
-      <Typography mt="1rem"></Typography>
+        {/* Space */}
+        <Typography mt="4rem" mb="2rem">
+          Just for practice, comment below the last line what the title of the
+          song is. If you don't know, then comment, "I don't know".
+        </Typography>
 
-      <NoteForScroll />
+        {/* <NoteForScroll /> */}
+
+        <CodeEditorWithOutput
+          content={`print("Is this the real life?")\nprint("Is this just fantasy?")`}
+          codeWidth={60}
+          outputWidth={40}
+          height="300px"
+          title="true"
+        />
+      </Box>
 
       <Proceed linkTo="/datatypes" />
     </Container>
