@@ -18,8 +18,6 @@ function CodeEditor(props) {
           value={content}
           options={{
             fontSize: '20px',
-            readOnly: true,
-            scrollBeyondLastLine: false,
           }}
         />
       </Box>
