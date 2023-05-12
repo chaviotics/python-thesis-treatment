@@ -29,7 +29,7 @@ function HelloWorld() {
           World!” Here’s how you can do it in Python.
         </Typography>
 
-        <Typography mt="1rem" mb="2rem">
+        <Typography mt="1rem" mb="1rem">
           Type in <code>print("Hello, World!")</code> in the code editor below
           under "Code" and press the <code>RUN CODE</code> button below to run
           your Python program.
