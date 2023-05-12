@@ -1,9 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
-import CodeEditor from '../../components/CodeEditor';
 import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
-// import NoteForScroll from '../../components/NoteForScroll';
 
 function Comment() {
   return (
@@ -51,13 +49,16 @@ print("Hello awesome person!")
           title="true"
         />
 
-        {/* Space */}
+        <Typography px="4rem" mt="2rem" fontSize="90%" fontStyle="italic">
+          Note: If you accidentally pressed the <code>CLEAR CODE</code> button,
+          you can undo it by pressing <code>CTRL + Z</code> on your keyboard
+          while your mouse cursor is active in the code editor.
+        </Typography>
+
         <Typography mt="4rem" mb="2rem">
           Just for practice, comment below the last line what the title of the
           song is. If you don't know, then comment, "I don't know".
         </Typography>
-
-        {/* <NoteForScroll /> */}
 
         <CodeEditorWithOutput
           content={`print("Is this the real life?")\nprint("Is this just fantasy?")`}

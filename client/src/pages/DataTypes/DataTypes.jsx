@@ -10,6 +10,7 @@ import {
 import dataTypesList from './basicDataTypes';
 import CodeEditor from '../../components/CodeEditor';
 import CodeOutput from '../../components/CodeOutput';
+import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
 function DataTypesList() {
@@ -115,39 +116,37 @@ function DataTypes() {
 
         <Typography mt="2rem" mb="1rem">
           In Python, you can check the data type of the value by using the
-          built-in function <code>type()</code>.{' '}
+          built-in function <code>type()</code>. To see its output, place it in
+          a <code>print()</code> such as the first example below. Try out
+          checking the data type for the values of <code>6.9</code>,{' '}
+          <code>True</code> and <code>420</code> in the code editor below.
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`print(type("hello")) 
-# prints out <class 'str'>, meaning "hello" is a string
+        <CodeEditorWithOutput
+          content={`# Below is the data type of "hello" 
+print(type("hello")) 
 
-print(type(3.14)) 
-# prints out <class 'float'>, meaning 3.14 is a float
+# Check the type of 6.9
 
-print(type(True)) 
-# prints out <class 'bool'>, meaning True is a boolean`}
-            height="300px"
-            width="75%"
-            title="true"
-          />
-          <CodeOutput
-            content={`<class 'str'>\n<class 'float'>\n<class 'bool'>`}
-            height="300px"
-            width="25%"
-            title="true"
-          />
-        </Box>
+
+# Check the type of True
+
+
+# Check the data type of 420
+`}
+          codeWidth={60}
+          outputWidth={40}
+          height="360px"
+          title="true"
+        />
       </Box>
+
+      <Typography px="4rem" mt="2rem" fontSize="90%" fontStyle="italic">
+        Note: If you accidentally pressed the <code>CLEAR CODE</code> button,
+        you can undo it by pressing <code>CTRL + Z</code> on your keyboard while
+        your mouse cursor is active in the code editor.
+      </Typography>
+
       <Proceed linkTo="/variables" />
     </Container>
   );

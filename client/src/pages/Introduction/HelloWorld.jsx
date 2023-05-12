@@ -1,7 +1,5 @@
 import React from 'react';
 import { Box, Container, Typography, List, ListItem } from '@mui/material';
-import CodeEditor from '../../components/CodeEditor';
-import CodeOutput from '../../components/CodeOutput';
 import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
