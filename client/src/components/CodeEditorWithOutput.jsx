@@ -1,12 +1,13 @@
-import React from 'react';
-import { useState } from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Typography, Button, Slider } from '@mui/material';
 import Editor from '@monaco-editor/react';
 import Sk from 'skulpt';
 
 function CodeEditorWithOutput(props) {
   const [content, setContent] = useState(props.content);
   const [outputContent, setOutputContent] = useState('');
+  const [editorWidth, setEditorWidth] = useState(props.codeWidth);
+  const [outputWidth, setOutputWidth] = useState(props.outputWidth);
 
   const handleCodeChange = (newCode) => {
     setContent(newCode);
@@ -48,6 +49,11 @@ function CodeEditorWithOutput(props) {
     setOutputContent(''); // Clear the code in the editor
   };
 
+  const handleSliderChange = (event, newValue) => {
+    setEditorWidth(newValue);
+    setOutputWidth(100 - newValue);
+  };
+
   return (
     <Box
       sx={{
@@ -60,7 +66,7 @@ function CodeEditorWithOutput(props) {
       {/* Code Editor & Output */}
       <Box sx={{ width: '100%', display: 'flex' }}>
         {/* Code Editor */}
-        <Box sx={{ width: props.editorWidth }}>
+        <Box sx={{ width: `${editorWidth}%` }}>
           {/* Title */}
           <Typography variant="h5" pb="0.5rem">
             {props.title === true || props.title === 'true' ? 'Code' : ''}
@@ -80,7 +86,7 @@ function CodeEditorWithOutput(props) {
         </Box>
 
         {/* Code Output */}
-        <Box sx={{ width: props.outputWidth }}>
+        <Box sx={{ width: `${outputWidth}%` }}>
           {/* Title */}
           <Typography variant="h5" pb="0.5rem">
             {props.title === true || props.title === 'true' ? 'Output' : ''}
@@ -105,6 +111,20 @@ function CodeEditorWithOutput(props) {
           </Box>
         </Box>
       </Box>
+
+      {/* Slider */}
+      <Slider
+        sx={{ width: '80%', mt: '1rem' }}
+        value={editorWidth}
+        onChange={handleSliderChange}
+        aria-label="Width Slider"
+        valueLabelDisplay="auto"
+        step={10}
+        marks
+        min={0}
+        max={100}
+      />
+      <Typography fontSize="75%">WIDTH SLIDER</Typography>
 
       {/* Buttons */}
       <Box sx={{ mt: '2rem', display: 'flex', gap: '1rem' }}>

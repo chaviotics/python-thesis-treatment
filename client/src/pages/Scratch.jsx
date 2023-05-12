@@ -1,5 +1,6 @@
-import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Container, Typography, Button, Slider } from '@mui/material';
+import CodeEditorWithOutput from '../components/CodeEditorWithOutput';
 
 function Scratch() {
   return (
@@ -18,7 +19,15 @@ function Scratch() {
       </Typography>
       <Typography variant="h2">Scratch</Typography>
 
-      <Typography mb="2rem"></Typography>
+      <Typography mb="4rem"></Typography>
+
+      <CodeEditorWithOutput
+        codeWidth={60}
+        outputWidth={40}
+        content={`print("hello")`}
+        height="300px"
+        title="true"
+      />
     </Container>
   );
 }
