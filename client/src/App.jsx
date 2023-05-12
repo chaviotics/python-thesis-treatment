@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 
 // Pages
+import Scratch from './pages/Scratch';
 import HomePage from './pages/HomePage/HomePage';
 import WhatIsPython from './pages/Introduction/WhatIsPython';
 import HelloWorld from './pages/Introduction/HelloWorld';
@@ -43,6 +44,19 @@ function NavBar() {
       }}
     >
       <List>
+      <ListItem sx={{ py: '0' }}>
+          <Typography
+            sx={{
+              color: linkFontColor,
+              textDecoration: 'none',
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/scratch"
+          >
+            Scratch
+          </Typography>
+        </ListItem>
         <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
@@ -265,6 +279,7 @@ function App() {
         {/* <NavBar /> */}
 
         <Routes>
+          <Route path="/scratch" element={<Scratch />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/intro/whatispython" element={<WhatIsPython />} />
           <Route path="/intro/helloworld" element={<HelloWorld />} />
