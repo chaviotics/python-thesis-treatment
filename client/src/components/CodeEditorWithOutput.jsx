@@ -128,15 +128,6 @@ function CodeEditorWithOutput(props) {
 
       {/* Buttons */}
       <Box sx={{ mt: '2rem', display: 'flex', gap: '1rem' }}>
-        {/* Run Code */}
-        <Button
-          sx={{ width: '180px' }}
-          size="large"
-          variant="contained"
-          onClick={executeCode}
-        >
-          Run Code
-        </Button>
         {/* Clear Code */}
         <Button
           sx={{ width: '180px' }}
@@ -145,6 +136,15 @@ function CodeEditorWithOutput(props) {
           onClick={clearCode}
         >
           Clear Code
+        </Button>
+        {/* Run Code */}
+        <Button
+          sx={{ width: '180px' }}
+          size="large"
+          variant="contained"
+          onClick={executeCode}
+        >
+          Run Code
         </Button>
         {/* Clear Output */}
         <Button
