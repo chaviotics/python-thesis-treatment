@@ -3,6 +3,13 @@ import { Box, Typography, Button, Slider } from '@mui/material';
 import Editor from '@monaco-editor/react';
 import Sk from 'skulpt';
 
+// Props:
+// codeWidth={}
+// outputWidth={}
+// content={}
+// height=""
+// title=""
+
 function CodeEditorWithOutput(props) {
   const [content, setContent] = useState(props.content);
   const [outputContent, setOutputContent] = useState('');
