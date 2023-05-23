@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography, List, ListItem } from '@mui/material';
 import CodeEditor from '../../components/CodeEditor';
 import CodeOutput from '../../components/CodeOutput';
+import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 import NoteForScroll from '../../components/NoteForScroll';
 
@@ -50,42 +51,66 @@ function ArithmeticOps() {
           ))}
         </List>
         {/* Examples in Code Editor */}
-        <Typography mt="2rem">
-          Here are some examples of how to perform these operations:
+        <Typography mt="2rem" mb="2rem">
+          Below are some examples of how to perform these operations. Click{' '}
+          <code>RUN CODE</code> in the interactive code editor to see the
+          output.
         </Typography>
 
-        <NoteForScroll />
-
-        {/* Space */}
-        <Typography mt="1rem"></Typography>
-
-        <CodeEditor
+        <CodeEditorWithOutput
           content={`# Addition
-print(3 + 5) # Output: 8
+add = 3 + 5
+print(f"3 + 5 = {add}")
   
 # Subtraction
-print(10 - 5) # Output: 5
+sub = 10 - 5
+print(f"10 - 5 = {sub}")
   
 # Multiplication
-print(3 * 5) # Output: 15
+mul = 3 * 5
+print(f"3 * 5 = {mul}")
   
 # Division
-print(10 / 3) # Output: 3.3333333333333335
+div = 10 / 3
+print(f"10 / 3 = {div}")
   
 # Floor Division
-print(10 // 3) # Output: 3
+floor_div = 10 // 3
+print(f"10 // 3 = {floor_div}")
   
 # Modulo
-print(10 % 3) # Output: 1
+mod = 10 % 3
+print(f"10 % 3 = {mod}")
   
 # Exponentiation
-print(3 ** 2) # Output: 9
+exp = 3 ** 2
+print(f"3 ** 2 = {exp}")
+
 `}
-          height="620px"
-          width="100%"
+          codeWidth={60}
+          outputWidth={40}
+          height="760px"
+          title="true"
         />
+
+        {/* Example */}
+
+        <Typography mt="4rem" mb="2rem">
+          Try getting the value of <code>1 + 2 - 3 * 4 / 5 ** 6</code>! Place it
+          in the <code>print()</code> in the interactive code editor below.
+        </Typography>
+
+        <CodeEditorWithOutput
+          content={`
+`}
+          codeWidth={70}
+          outputWidth={30}
+          height="120px"
+          title="true"
+        />
+
         {/* Shorthand Operators */}
-        <Typography mt="4rem" textAlign="center" variant="h3">
+        <Typography mt="6rem" textAlign="center" variant="h3">
           Shorthand Operators
         </Typography>
 
@@ -125,31 +150,21 @@ z /= 2   # same as z = z / 2
         {/* Examle */}
 
         <Typography mt="4rem" mb="1rem">
-          Let's now give a concrete example. Consider the following code:
+          Let's now give a concrete example. Consider the code below and press{' '}
+          <code>RUN CODE</code>.
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`x = 5
+        <CodeEditorWithOutput
+          content={`x = 5
 x += 3 # shorthand operator for x = x + 3
 
 print(x)
 `}
-            height="150px"
-            width="60%"
-            title="true"
-          />
-
-          <CodeOutput content={`8`} height="150px" width="40%" title="true" />
-        </Box>
+          codeWidth={60}
+          outputWidth={40}
+          height="150px"
+          title="true"
+        />
 
         <Typography mt="2rem">
           In this example, the <code>+=</code> operator is used to add the value
@@ -158,38 +173,29 @@ print(x)
           executed, the output will be 8.
         </Typography>
 
-        <Typography mt="4rem">Here are other examples:</Typography>
+        <Typography mt="4rem">
+          Here are other examples. Do the mini-activity below!
+        </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`y = 10
+        <CodeEditorWithOutput
+          content={`y = 10
 y -= 5  # shorthand operator for y = y - 5
-print(y)  # Output: 5
+print(y)
 
+# ----- MINI-ACTIVITY -----
 z = 2
-z *= 3 # shorthand operator for z = z * 3
-print(z)  # Output: 6
-`}
-            height="250px"
-            width="60%"
-            title="true"
-          />
 
-          <CodeOutput
-            content={`5\n6`}
-            height="250px"
-            width="40%"
-            title="true"
-          />
-        </Box>
+# Multiply the value of z with 3 
+# using the shorthand operator 
+
+
+print(z)
+`}
+          codeWidth={70}
+          outputWidth={30}
+          height="360px"
+          title="true"
+        />
 
         <Typography fontStyle="italic" mt="4rem">
           We will be using more of shorthand operators in later part of this
