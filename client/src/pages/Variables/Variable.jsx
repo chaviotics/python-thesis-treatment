@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import CodeEditor from '../../components/CodeEditor';
 import CodeOutput from '../../components/CodeOutput';
+import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
 function Variable() {
@@ -27,36 +28,31 @@ function Variable() {
           A variable in Python is like a box where you can store values. Think
           of it like a label for the data you put inside. To create a variable,
           you give it a name and assign a value to it using the equals sign ({' '}
-          <code>=</code> ). For example:
+          <code>=</code> ). For example, check out the interactive code editor
+          below, and click <code>RUN CODE</code>. Also, try and do the
+          mini-activity in the interactive code editor.
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`age = 10
+        <CodeEditorWithOutput
+          content={`age = 10
 print(age)
 
 name = "Isaac"
-print(name)`}
-            height="220px"
-            width="50%"
-            title="true"
-          />
+print(name)
 
-          <CodeOutput
-            content={`10\nIsaac`}
-            height="220px"
-            width="50%"
-            title="true"
-          />
-        </Box>
+# ----- MINI-ACTIVITY -----
+
+# Create a variable called "height_in_m" 
+# that holds the value 1.8 below
+
+
+# Print the variable "height_in_m"
+`}
+          codeWidth={60}
+          outputWidth={40}
+          height="420px"
+          title="true"
+        />
 
         <Typography mt="2rem">
           When you assign a value to a variable, Python{' '}
@@ -75,34 +71,24 @@ print(name)`}
           of a variable or a value. For example:
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`age = 10
+        <CodeEditorWithOutput
+          content={`age = 10
 print(type(age))
 
 name = "Isaac"
 print(type(name))
-`}
-            height="220px"
-            width="50%"
-            title="true"
-          />
 
-          <CodeOutput
-            content={`<class 'int'>\n<class 'str'>`}
-            height="220px"
-            width="50%"
-            title="true"
-          />
-        </Box>
+# ----- MINI-ACTIVITY -----
+
+height_in_m = 1.8
+
+# Check the type of the variable "height_in_m" using type() 
+`}
+          codeWidth={80}
+          outputWidth={20}
+          height="400px"
+          title="true"
+        />
 
         <Typography mt="4rem" mb="1rem">
           What if we can place in expressions such as variables in our{' '}
@@ -175,13 +161,33 @@ print(f"My name is {name} and I am {age} years old.")
           />
         </Box>
 
-        <Typography mt="4rem">
+        <Typography mt="4rem" mb="4rem">
           Formatted strings can also include expressions that call functions or
           perform arithmetic operations, making it easy to create complex
           strings with dynamic content. Overall, formatted strings provide a
           concise and readable way to insert variable values into a string in
           Python.
         </Typography>
+
+        <Typography mb="2rem">
+          Now, try out using f-strings by printing out this statement:{' '}
+          <strong>
+            "Edith is currently studying in The University of the Philippines"
+          </strong>{' '}
+          using the variables below.
+        </Typography>
+
+        <CodeEditorWithOutput
+          content={`name = "Edith"
+school = "The University of the Philippines"
+
+# Code your print() statement with f-string below here
+`}
+          codeWidth={70}
+          outputWidth={30}
+          height="300px"
+          title="true"
+        />
       </Box>
 
       <Proceed linkTo="/arithmeticops" />
