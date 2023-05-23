@@ -109,6 +109,7 @@ function CodeEditorWithOutput(props) {
                 value={content}
                 options={{
                   fontSize: '20px',
+                  wordWrap: 'on',
                 }}
                 onChange={handleCodeChange}
               />
