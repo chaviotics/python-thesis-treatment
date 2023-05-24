@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import CodeEditor from '../../components/CodeEditor';
 import CodeOutput from '../../components/CodeOutput';
+import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 import NoteForScroll from '../../components/NoteForScroll';
 
@@ -186,10 +187,44 @@ else:
           conditions, different messages will be printed.
         </Typography>
 
-        <Typography fontStyle="italic">
+        <Typography fontStyle="italic" mb="4rem">
           In Python, you can use the <code>and</code>, <code>or</code> and{' '}
           <code>not</code> logical operators in conditional statements.
         </Typography>
+
+        <Typography mb="2rem">
+          Now, apply your skills in the activity below!
+        </Typography>
+
+        {/* Activity */}
+
+        <Typography fontWeight="bold" variant="h5" mb="1rem">
+          Instruction:
+        </Typography>
+        <Typography mb="1rem">
+          Create a program that compares the two numeric variables{' '}
+          <code>x</code> and <code>y</code> and prints out which number is
+          greater. An example output would be "x is greater than y".
+        </Typography>
+
+        <Typography mb="2rem">
+          <em>
+            Hint: You'll be using the <code>if</code>, <code>elif</code> and{' '}
+            <code>else</code> statements.
+          </em>
+        </Typography>
+
+        <CodeEditorWithOutput
+          content={`x = 1
+y = 2
+
+# Write your conditional statements below here
+`}
+          codeWidth={70}
+          outputWidth={30}
+          height="400px"
+          title="true"
+        />
       </Box>
 
       <Proceed linkTo="/lists" />
