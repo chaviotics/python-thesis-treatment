@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
+import Warning from '@mui/icons-material/Warning';
 
 function BackTooltip() {
   const [isHovered, setIsHovered] = useState(false);
@@ -28,7 +28,7 @@ function BackTooltip() {
           onMouseLeave={handleMouseLeave}
           sx={{ color: 'white' }}
         >
-          <InfoIcon />
+          <Warning />
         </IconButton>
       </Tooltip>
     </Box>
