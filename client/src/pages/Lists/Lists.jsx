@@ -331,10 +331,13 @@ True
 
 
 # Merge the subject with this list: ["KAS", "LIT"] using +.
+
+
+# Print the list "subject".
 `}
           codeWidth={70}
           outputWidth={30}
-          height="500px"
+          height="550px"
           title="true"
         />
       </Box>
