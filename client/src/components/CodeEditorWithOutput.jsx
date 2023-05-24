@@ -163,8 +163,9 @@ function CodeEditorWithOutput(props) {
           <Tooltip
             title="Adjust the box width of the code editor and output using the slider by dragging the circle left or right."
             placement="right"
+            arrow
           >
-            <InfoIcon />
+            <InfoIcon sx={{ fontSize: '1rem' }} />
           </Tooltip>
         </Typography>
 
