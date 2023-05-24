@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button, Slider } from '@mui/material';
+import { Box, Typography, Button, Slider, Tooltip } from '@mui/material';
 import Editor from '@monaco-editor/react';
 import Sk from 'skulpt';
+import InfoIcon from '@mui/icons-material/Info';
 
 // Props:
 // codeWidth={}
@@ -65,9 +66,6 @@ function CodeEditorWithOutput(props) {
     <Box
       sx={{
         width: '100%',
-        // display: 'flex',
-        // flexDirection: 'column',
-        // alignItems: 'center',
       }}
     >
       <Typography
@@ -144,6 +142,7 @@ function CodeEditorWithOutput(props) {
         </Box>
 
         {/* Slider */}
+
         <Slider
           sx={{ width: '80%', mt: '1rem' }}
           value={editorWidth}
@@ -155,7 +154,19 @@ function CodeEditorWithOutput(props) {
           min={0}
           max={100}
         />
-        <Typography fontSize="75%">WIDTH SLIDER</Typography>
+
+        <Typography
+          sx={{ mt: '10px', display: 'flex', gap: '4px', alignItems: 'center' }}
+          fontSize="75%"
+        >
+          WIDTH SLIDER{' '}
+          <Tooltip
+            title="Adjust the box width of the code editor and output using the slider by dragging the circle left or right."
+            placement="right"
+          >
+            <InfoIcon />
+          </Tooltip>
+        </Typography>
 
         {/* Buttons */}
         <Box sx={{ mt: '2rem', display: 'flex', gap: '1rem' }}>
