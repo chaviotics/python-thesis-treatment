@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import CodeEditor from '../../components/CodeEditor';
 import CodeOutput from '../../components/CodeOutput';
+import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
 function Lists() {
@@ -302,6 +303,40 @@ True
             title="true"
           />
         </Box>
+
+        <Typography mb="2rem">
+          Now, apply your skills in the activity below!
+        </Typography>
+
+        {/* Activity */}
+
+        <Typography fontWeight="bold" variant="h5" mb="1rem">
+          Instruction:
+        </Typography>
+        <Typography mb="1rem">
+          Follow the instructions inside the interactive code editor!
+        </Typography>
+
+        <CodeEditorWithOutput
+          content={`# Create a list called "subjects" that contains "Math" and "CMSC".
+
+
+# Print the length of the list you just created.
+
+
+# Add in "ECON" in the list using append().
+
+
+# Print the 2nd element in the list.
+
+
+# Merge the subject with this list: ["KAS", "LIT"] using +.
+`}
+          codeWidth={70}
+          outputWidth={30}
+          height="500px"
+          title="true"
+        />
       </Box>
 
       <Proceed linkTo="/whileloop" />
