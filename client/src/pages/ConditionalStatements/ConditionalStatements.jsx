@@ -164,11 +164,11 @@ else:
           both valid syntax in Python.
         </Typography>
 
-        <Typography mb="2rem">
+        {/* Activity */}
+
+        <Typography mt="4rem" mb="2rem">
           Now, apply your skills in the activity below!
         </Typography>
-
-        {/* Activity */}
 
         <Typography fontWeight="bold" variant="h5" mb="1rem">
           Instruction:

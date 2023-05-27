@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import CodeEditor from '../../components/CodeEditor';
 import CodeOutput from '../../components/CodeOutput';
+import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
 function WhileLoop() {
@@ -48,36 +49,22 @@ function WhileLoop() {
         {/* Code Example 1 */}
 
         <Typography mt="4rem" mb="1rem">
-          Let's consider the code below:
+          Let's consider the code below, and press <code>RUN CODE</code> to see
+          the output!
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`count = 0
+        <CodeEditorWithOutput
+          content={`count = 0
+
 while count < 5:
     print(count)
     count += 1
 `}
-            height="200px"
-            width="50%"
-            title="true"
-          />
-
-          <CodeOutput
-            content={`0\n1\n2\n3\n4`}
-            height="200px"
-            width="50%"
-            title="true"
-          />
-        </Box>
+          codeWidth={50}
+          outputWidth={50}
+          height="200px"
+          title="true"
+        />
 
         <Typography mt="2rem" mb="1rem">
           Initially, a variable called <code>count</code> is set to 0. Then, a{' '}
@@ -112,6 +99,7 @@ while count < 5:
         >
           <CodeEditor
             content={`count = 1
+
 while count > 0:
     print(count)
     count += 1
@@ -150,6 +138,11 @@ while count > 0:
           crash!
         </Typography>
 
+        <Typography mt="2rem" mb="1rem">
+          Notice that I didn't use the interactive code editor. It's because if
+          I try to do an infinite loop, it would cause a crash in this web page!
+        </Typography>
+
         {/* Break & Continue Statements */}
 
         <Typography mt="6rem" mb="2rem" variant="h3" textAlign="center">
@@ -177,34 +170,20 @@ while count > 0:
           Consider the code below:
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`i = 0
+        <CodeEditorWithOutput
+          content={`i = 0
+
 while i < 10:
     print(i)
     if i == 5:
         break
-    i += 1`}
-            height="220px"
-            width="50%"
-            title="true"
-          />
-
-          <CodeOutput
-            content={`0\n1\n2\n3\n4\n5`}
-            height="220px"
-            width="50%"
-            title="true"
-          />
-        </Box>
+    i += 1
+`}
+          codeWidth={50}
+          outputWidth={50}
+          height="240px"
+          title="true"
+        />
 
         <Typography mt="2rem" mb="1rem">
           In this example above, we start with <code>i = 0</code> and use a{' '}
@@ -230,35 +209,20 @@ while i < 10:
           Consider the code below:
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`i = 0
+        <CodeEditorWithOutput
+          content={`i = 0
+
 while i < 10:
     i += 1
     if i % 2 == 0:
         continue
     print(i)
 `}
-            height="220px"
-            width="50%"
-            title="true"
-          />
-
-          <CodeOutput
-            content={`1\n3\n5\n7\n9`}
-            height="220px"
-            width="50%"
-            title="true"
-          />
-        </Box>
+          codeWidth={50}
+          outputWidth={50}
+          height="240px"
+          title="true"
+        />
 
         <Typography mt="2rem" mb="1rem">
           In this example, we start with <code>i = 0</code> and use a{' '}
@@ -267,6 +231,50 @@ while i < 10:
           over even values of <code>i</code> and only print odd values. So the
           loop will print the values 1, 3, 5, 7, and 9.
         </Typography>
+
+        {/* Activity */}
+
+        <Typography mt="4rem" mb="2rem">
+          Now, apply your skills in the activity below!
+        </Typography>
+
+        <Typography fontWeight="bold" variant="h5" mb="1rem">
+          Instruction:
+        </Typography>
+        <Typography mb="1rem">
+          Create a program that prints even numbers from 0 to 10 using a{' '}
+          <code>while</code> loop. Follow along the comments inside the
+          interactive code editor.
+        </Typography>
+
+        <Typography mb="1rem">
+          <em>Note: Mind the indentation.</em>
+        </Typography>
+
+        <CodeEditorWithOutput
+          content={`# Create a variable "number" that holds the value 0.
+
+
+# Create the while statement with the condition: number < 10. Don't forget the colon at the end!
+
+
+    # Increment number by 1
+
+    
+    # Create a conditional statement that checks if the number is odd with this condition: number % 2 != 0. (Mind the colon at the end of the if-statement)
+
+
+        # Place the continue statement. This skips the odd numbers.
+    
+
+    # Output the even number
+
+`}
+          codeWidth={70}
+          outputWidth={30}
+          height="620px"
+          title="true"
+        />
       </Box>
 
       <Proceed linkTo="/forloop" />
