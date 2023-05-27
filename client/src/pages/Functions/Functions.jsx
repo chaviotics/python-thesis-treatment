@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, Container, Typography, List, ListItem } from '@mui/material';
-import Proceed from '../../components/Proceed';
 import CodeEditor from '../../components/CodeEditor';
 import CodeOutput from '../../components/CodeOutput';
+import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
+import Proceed from '../../components/Proceed';
 
 function Functions() {
   return (
@@ -89,31 +90,21 @@ function Functions() {
           arguments are the actual values passed to the function when it is
           called. In the example below, <code>a</code> and <code>b</code> are
           parameters (line 1) while <code>1</code> and <code>2</code> (line 4)
-          are the arguments:
+          are the arguments. Press <code>RUN CODE</code> to see the output!
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`def add_numbers(a, b):
+        <CodeEditorWithOutput
+          content={`def add_numbers(a, b):
     return a + b
 
 result = add_numbers(1, 2)
 print(result)
-    `}
-            height="200px"
-            width="50%"
-            title="true"
-          />
-          <CodeOutput content={`3`} height="200px" width="50%" title="true" />
-        </Box>
+`}
+          codeWidth={50}
+          outputWidth={50}
+          height="200px"
+          title="true"
+        />
 
         {/* Function with no return */}
         <Typography variant="h4" mt="4rem" mb="1rem">
@@ -126,33 +117,17 @@ print(result)
           that prints a message to the console:
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`def print_message():
+        <CodeEditorWithOutput
+          content={`def print_message():
     print("Hello, world!")
 
 print_message()
 `}
-            height="200px"
-            width="50%"
-            title="true"
-          />
-
-          <CodeOutput
-            content={`Hello, world!`}
-            height="200px"
-            width="50%"
-            title="true"
-          />
-        </Box>
+          codeWidth={50}
+          outputWidth={50}
+          height="180px"
+          title="true"
+        />
 
         {/* Other Examples */}
         <Typography variant="h4" mt="4rem" mb="1rem">
@@ -169,42 +144,23 @@ print_message()
           Example 1: Using Function in a Conditional Statement:
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`def even_or_odd(number):
+        <CodeEditorWithOutput
+          content={`def even_or_odd(number):
     if number % 2 == 0:
         print(f"{number} is an EVEN number.")
     else:
         print(f"{number} is an ODD number.")
 
 even_or_odd(4)
-even_or_odd(7)
-even_or_odd(11)
-even_or_odd(44)
-`}
-            height="320px"
-            width="65%"
-            title="true"
-          />
 
-          <CodeOutput
-            content={`4 is an EVEN number.
-7 is an ODD number.
-11 is an ODD number.
-44 is an EVEN number.`}
-            height="320px"
-            width="35%"
-            title="true"
-          />
-        </Box>
+# Try out different values such as 7, 11, 128 with the even_or_odd() function!
+
+`}
+          codeWidth={60}
+          outputWidth={40}
+          height="400px"
+          title="true"
+        />
 
         <Typography mt="2rem">
           In the example above, the function takes in a parameter{' '}
@@ -226,17 +182,8 @@ even_or_odd(44)
           Example 2: Using Function with a List and a Loop:
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`def sum_list(numbers):
+        <CodeEditorWithOutput
+          content={`def sum_list(numbers):
     total = 0
     for number in numbers:
         total += number
@@ -246,22 +193,14 @@ my_numbers1 = [1, 2, 3, 4, 5]
 result1 = sum_list(my_numbers1)
 print(result1)
 
-my_numbers2 = [3, 27, 100, 69, 420]
-result2 = sum_list(my_numbers2)
-print(result2)
-`}
-            height="400px"
-            width="65%"
-            title="true"
-          />
+# Create a list (of numeric values) on your own and use the sum_list() function!
 
-          <CodeOutput
-            content={`15\n619`}
-            height="400px"
-            width="35%"
-            title="true"
-          />
-        </Box>
+`}
+          codeWidth={60}
+          outputWidth={40}
+          height="450px"
+          title="true"
+        />
 
         <Typography mt="2rem">
           In the example above, the <code>sum_list()</code> function takes a
