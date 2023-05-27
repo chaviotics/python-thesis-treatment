@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import CodeEditor from '../../components/CodeEditor';
 import CodeOutput from '../../components/CodeOutput';
+import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
 function ForLoop() {
@@ -53,33 +54,21 @@ function ForLoop() {
         </Typography>
 
         {/* Example 1 */}
-        <Typography variant="h5" fontWeight="bold" mt="2rem">
+        <Typography variant="h5" fontWeight="bold" mt="2rem" mb="1rem">
           Example 1: Using a <code>for</code> loop to iterate through a range of
           numbers
         </Typography>
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`for i in range(5):
-  print(i)`}
-            height="180px"
-            width="50%"
-            title="true"
-          />
-          <CodeOutput
-            content={`0\n1\n2\n3\n4`}
-            height="180px"
-            width="50%"
-            title="true"
-          />
-        </Box>
+
+        <CodeEditorWithOutput
+          content={`for i in range(5):
+  print(i)
+`}
+          codeWidth={50}
+          outputWidth={50}
+          height="200px"
+          title="true"
+        />
+
         <Typography mt="2rem">
           In this example, we use the <code>range()</code> function to generate
           a sequence of numbers from 0 to 4 (because <code>range(5)</code>{' '}
@@ -93,31 +82,19 @@ function ForLoop() {
           Example 2: Using a <code>for</code> loop to iterate through a list of
           items
         </Typography>
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`fruits = ['apple', 'banana', 'cherry']
+
+        <CodeEditorWithOutput
+          content={`fruits = ['apple', 'banana', 'cherry']
 
 for fruit in fruits:
-    print(fruit)`}
-            height="180px"
-            width="55%"
-            title="true"
-          />
-          <CodeOutput
-            content={`apple\nbanana\ncherry`}
-            height="180px"
-            width="45%"
-            title="true"
-          />
-        </Box>
+    print(fruit)
+`}
+          codeWidth={60}
+          outputWidth={40}
+          height="200px"
+          title="true"
+        />
+
         <Typography mt="2rem">
           In this example, we create a list of fruit names and use a{' '}
           <code>for</code> loop to iterate over the list and print each fruit
@@ -128,31 +105,19 @@ for fruit in fruits:
         <Typography variant="h5" fontWeight="bold" mt="4rem">
           Example 3: Using a <code>for</code> loop to iterate through a string
         </Typography>
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`word = "Python"
+
+        <CodeEditorWithOutput
+          content={`word = "Python"
 
 for letter in word:
-    print(letter)`}
-            height="220px"
-            width="50%"
-            title="true"
-          />
-          <CodeOutput
-            content={`P\ny\nt\nh\no\nn`}
-            height="220px"
-            width="50%"
-            title="true"
-          />
-        </Box>
+    print(letter)
+`}
+          codeWidth={60}
+          outputWidth={40}
+          height="220px"
+          title="true"
+        />
+
         <Typography mt="2rem">
           In this example, we use a for loop to iterate over each character in
           the string and print it.
@@ -181,36 +146,19 @@ for letter in word:
           Example: Using <code>break</code> to exit a loop early
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
+        <CodeEditorWithOutput
+          content={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
 
 for fruit in fruits:
     print(fruit)
     if fruit == 'grapes':
-        break`}
-            height="220px"
-            width="80%"
-            title="true"
-          />
-          <CodeOutput
-            content={`apple
-banana
-cherry
-grapes`}
-            height="220px"
-            width="20%"
-            title="true"
-          />
-        </Box>
+        break
+`}
+          codeWidth={80}
+          outputWidth={20}
+          height="220px"
+          title="true"
+        />
 
         <Typography mt="2rem" mb="1rem">
           In this example, we create a list of fruit names and use a{' '}
@@ -229,42 +177,25 @@ grapes`}
           Example : Using <code>continue</code> to skip over some iterations
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'row',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
+        <CodeEditorWithOutput
+          content={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
 
 for fruit in fruits:
-    print(fruit)
     if fruit == 'cherry':
-        continue`}
-            height="220px"
-            width="80%"
-            title="true"
-          />
-          <CodeOutput
-            content={`apple
-banana
-grapes
-orange`}
-            height="220px"
-            width="20%"
-            title="true"
-          />
-        </Box>
+        continue
+    print(fruit)
+`}
+          codeWidth={80}
+          outputWidth={20}
+          height="220px"
+          title="true"
+        />
 
         <Typography mt="2rem" mb="1rem">
           In this example, we create a list of fruit names and use a{' '}
           <code>for</code> loop to iterate over the list and print each fruit
           name. We use the <code>continue</code> statement to skip over the
-          fruit name 'cherry', so the loop will print all the other fruit names.
+          fruit name 'cherry', and print all the other fruit names.
         </Typography>
       </Box>
 
