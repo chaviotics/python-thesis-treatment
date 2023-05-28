@@ -99,10 +99,12 @@ function Functions(props) {
 
 result = add_numbers(1, 2)
 print(result)
+
+# Use the function add_numbers(), and place in the values 419 and 68. Print its result.
 `}
-          codeWidth={50}
-          outputWidth={50}
-          height="200px"
+          codeWidth={60}
+          outputWidth={40}
+          height="320px"
           title="true"
         />
 
@@ -122,10 +124,12 @@ print(result)
     print("Hello, world!")
 
 print_message()
+
+# Try creating a for loop that calls print_message() 5 times!
 `}
-          codeWidth={50}
-          outputWidth={50}
-          height="180px"
+          codeWidth={60}
+          outputWidth={40}
+          height="340px"
           title="true"
         />
 
@@ -198,7 +202,7 @@ print(result1)
 `}
           codeWidth={60}
           outputWidth={40}
-          height="450px"
+          height="500px"
           title="true"
         />
 
@@ -220,11 +224,10 @@ print(result1)
 
         <Typography mt="2rem">
           The program then demonstrates how to use the <code>sum_list()</code>{' '}
-          function by calling it twice with different input lists. The results
-          are stored in variables called <code>result1</code> and{' '}
-          <code>result2</code>, respectively. Finally, the results are printed
-          to the console using the <code>print()</code> function. The output
-          will be the sum of the numbers in each of the input lists.
+          function by calling it with the list <code>my_numbers1</code>. The
+          results are stored in a variable called <code>result1</code>. Finally,
+          the result is printed to the console using <code>print()</code> . The
+          output will be the sum of the numbers in each of the list.
         </Typography>
 
         <Typography mt="2rem">
