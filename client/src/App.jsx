@@ -1,17 +1,17 @@
 import { useState } from 'react';
 import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
+
 import {
-  Button,
   Box,
+  Button,
   IconButton,
-  createTheme,
-  CssBaseline,
-  ThemeProvider,
   List,
   ListItem,
   Typography,
 } from '@mui/material';
+
+import { CssBaseline, createTheme, ThemeProvider } from '@mui/material';
 
 // Pages
 import Scratch from './pages/Scratch';
