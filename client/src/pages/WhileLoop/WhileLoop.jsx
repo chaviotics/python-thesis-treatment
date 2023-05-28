@@ -248,7 +248,9 @@ while i < 10:
         </Typography>
 
         <Typography mb="1rem">
-          <em>Note: Mind the indentation.</em>
+          <em>
+            Hint: Mind the indentation, and place the code below the comments.
+          </em>
         </Typography>
 
         <CodeEditorWithOutput
@@ -267,12 +269,12 @@ while i < 10:
         # Place the continue statement. This skips the odd numbers.
     
 
-    # Output the even number
+    # Print the variable "number"
 
 `}
           codeWidth={70}
           outputWidth={30}
-          height="620px"
+          height="650px"
           title="true"
         />
       </Box>
