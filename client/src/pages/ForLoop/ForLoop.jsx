@@ -59,23 +59,28 @@ function ForLoop(props) {
           numbers
         </Typography>
 
-        <CodeEditorWithOutput
-          content={`for i in range(5):
-  print(i)
-`}
-          codeWidth={50}
-          outputWidth={50}
-          height="200px"
-          title="true"
-        />
-
-        <Typography mt="2rem">
+        <Typography mt="2rem" mb="1rem">
           In this example, we use the <code>range()</code> function to generate
-          a sequence of numbers from 0 to 4 (because <code>range(5)</code>{' '}
-          generates a sequence up to, but not including, 5). The{' '}
+          a sequence of numbers from 0 to 3 (because <code>range(4)</code>{' '}
+          generates a sequence up to, but not including, 4). The{' '}
           <code>for</code> loop then iterates over this sequence and prints each
           number.
         </Typography>
+
+        <CodeEditorWithOutput
+          content={`for i in range(4):
+  print(i)
+
+
+print()
+
+# Try printing out the numbers from 0 to 7 using a for loop
+`}
+          codeWidth={50}
+          outputWidth={50}
+          height="400px"
+          title="true"
+        />
 
         {/* Example 2 */}
         <Typography variant="h5" fontWeight="bold" mt="4rem">
@@ -83,27 +88,37 @@ function ForLoop(props) {
           items
         </Typography>
 
-        <CodeEditorWithOutput
-          content={`fruits = ['apple', 'banana', 'cherry']
-
-for fruit in fruits:
-    print(fruit)
-`}
-          codeWidth={60}
-          outputWidth={40}
-          height="200px"
-          title="true"
-        />
-
-        <Typography mt="2rem">
+        <Typography mt="2rem" mb="1rem">
           In this example, we create a list of fruit names and use a{' '}
           <code>for</code> loop to iterate over the list and print each fruit
           name.
         </Typography>
 
+        <CodeEditorWithOutput
+          content={`fruits = ['apple', 'banana', 'cherry']
+
+for fruit in fruits:
+    print(fruit)
+
+print()
+
+subjects = ["Math", "Science", "Filipino", "English"]
+# Try printing out all the contents in the "subjects" list using a for loop
+`}
+          codeWidth={70}
+          outputWidth={30}
+          height="420px"
+          title="true"
+        />
+
         {/* Example 3 */}
         <Typography variant="h5" fontWeight="bold" mt="4rem">
           Example 3: Using a <code>for</code> loop to iterate through a string
+        </Typography>
+
+        <Typography mt="2rem" mb="1rem">
+          In this example, we use a for loop to iterate over each character in
+          the string and print it.
         </Typography>
 
         <CodeEditorWithOutput
@@ -111,17 +126,17 @@ for fruit in fruits:
 
 for letter in word:
     print(letter)
+
+print()
+
+string = "abcde12345!@#$%"
+# Try printing out all the contents in the "string" variable using a for loop
 `}
           codeWidth={60}
           outputWidth={40}
-          height="220px"
+          height="430px"
           title="true"
         />
-
-        <Typography mt="2rem">
-          In this example, we use a for loop to iterate over each character in
-          the string and print it.
-        </Typography>
 
         {/* Break & Continue */}
 
@@ -142,8 +157,17 @@ for letter in word:
         <Typography mt="2rem" variant="h4">
           The <code>break</code> Statement
         </Typography>
-        <Typography variant="h5" mt="1rem" mb="1rem">
+        <Typography variant="h5" fontWeight="bold" mt="2rem" mb="1rem">
           Example: Using <code>break</code> to exit a loop early
+        </Typography>
+
+        <Typography mt="1rem" mb="1rem">
+          In this example, we create a list of fruit names and use a{' '}
+          <code>for</code> loop to iterate over the list and print each fruit
+          name. We use the <code>break</code> statement to exit the loop when
+          the loop variable <code>fruit</code> is equal to <code>'grapes'</code>
+          , so the loop will only print the first four fruit names, and not
+          continue with rest.
         </Typography>
 
         <CodeEditorWithOutput
@@ -160,21 +184,19 @@ for fruit in fruits:
           title="true"
         />
 
-        <Typography mt="2rem" mb="1rem">
-          In this example, we create a list of fruit names and use a{' '}
-          <code>for</code> loop to iterate over the list and print each fruit
-          name. We use the <code>break</code> statement to exit the loop when
-          the loop variable <code>fruit</code> is equal to <code>'grapes'</code>
-          , so the loop will only print the first four fruit names, and not
-          continue with rest.
-        </Typography>
-
         {/* Continue */}
         <Typography mt="4rem" variant="h4">
           The <code>continue</code> Statement
         </Typography>
-        <Typography variant="h5" mt="1rem" mb="1rem">
+        <Typography variant="h5" fontWeight="bold" mt="2rem" mb="1rem">
           Example : Using <code>continue</code> to skip over some iterations
+        </Typography>
+
+        <Typography mt="1rem" mb="1rem">
+          In this example, we create a list of fruit names and use a{' '}
+          <code>for</code> loop to iterate over the list and print each fruit
+          name. We use the <code>continue</code> statement to skip over the
+          fruit name 'cherry', and print all the other fruit names.
         </Typography>
 
         <CodeEditorWithOutput
@@ -190,13 +212,6 @@ for fruit in fruits:
           height="220px"
           title="true"
         />
-
-        <Typography mt="2rem" mb="1rem">
-          In this example, we create a list of fruit names and use a{' '}
-          <code>for</code> loop to iterate over the list and print each fruit
-          name. We use the <code>continue</code> statement to skip over the
-          fruit name 'cherry', and print all the other fruit names.
-        </Typography>
       </Box>
 
       <Proceed linkTo={props.linkTo} />
