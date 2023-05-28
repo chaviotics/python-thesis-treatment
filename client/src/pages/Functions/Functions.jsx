@@ -5,7 +5,7 @@ import CodeOutput from '../../components/CodeOutput';
 import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
-function Functions() {
+function Functions(props) {
   return (
     <Container
       sx={{
@@ -234,7 +234,7 @@ print(result1)
         </Typography>
       </Box>
 
-      <Proceed linkTo="/quiz" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

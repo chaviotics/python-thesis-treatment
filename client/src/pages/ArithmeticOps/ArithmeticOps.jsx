@@ -16,7 +16,7 @@ const operations = [
   { id: 7, operation: `Exponentiation`, operator: `**` },
 ];
 
-function ArithmeticOps() {
+function ArithmeticOps(props) {
   return (
     <Container
       sx={{
@@ -205,7 +205,7 @@ print(z)
         {/*  */}
       </Box>
 
-      <Proceed linkTo="/conditionals" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

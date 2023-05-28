@@ -5,7 +5,7 @@ import CodeOutput from '../../components/CodeOutput';
 import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
-function Variable() {
+function Variable(props) {
   return (
     <Container
       sx={{
@@ -190,7 +190,7 @@ school = "The University of the Philippines"
         />
       </Box>
 
-      <Proceed linkTo="/arithmeticops" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

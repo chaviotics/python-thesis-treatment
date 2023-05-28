@@ -5,7 +5,7 @@ import CodeOutput from '../../components/CodeOutput';
 import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
-function ForLoop() {
+function ForLoop(props) {
   return (
     <Container
       sx={{
@@ -199,7 +199,7 @@ for fruit in fruits:
         </Typography>
       </Box>
 
-      <Proceed linkTo="/functions" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

@@ -6,7 +6,7 @@ import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 import NoteForScroll from '../../components/NoteForScroll';
 
-function ConditionalStatements() {
+function ConditionalStatements(props) {
   return (
     <Container
       sx={{
@@ -199,7 +199,7 @@ y = 2
         />
       </Box>
 
-      <Proceed linkTo="/lists" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

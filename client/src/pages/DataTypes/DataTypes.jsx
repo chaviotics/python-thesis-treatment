@@ -73,7 +73,7 @@ function DataTypesList() {
   );
 }
 
-function DataTypes() {
+function DataTypes(props) {
   return (
     <Container
       sx={{
@@ -147,7 +147,7 @@ print(type("hello"))
         your mouse cursor is active in the code editor.
       </Typography>
 
-      <Proceed linkTo="/variables" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

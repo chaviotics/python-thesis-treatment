@@ -3,7 +3,7 @@ import { Box, Container, Typography, List, ListItem } from '@mui/material';
 import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
-function HelloWorld() {
+function HelloWorld(props) {
   return (
     <Container
       sx={{
@@ -67,7 +67,7 @@ function HelloWorld() {
         </List>
       </Box>
 
-      <Proceed linkTo="/intro/comment" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

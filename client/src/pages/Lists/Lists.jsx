@@ -5,7 +5,7 @@ import CodeOutput from '../../components/CodeOutput';
 import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
-function Lists() {
+function Lists(props) {
   return (
     <Container
       sx={{
@@ -268,7 +268,7 @@ print()
         />
       </Box>
 
-      <Proceed linkTo="/whileloop" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

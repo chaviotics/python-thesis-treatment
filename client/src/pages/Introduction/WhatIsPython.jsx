@@ -124,7 +124,7 @@ function CompareWithTable() {
   );
 }
 
-function WhatIsPython() {
+function WhatIsPython(props) {
   return (
     <Container
       sx={{
@@ -170,7 +170,7 @@ function WhatIsPython() {
           </Box>
         </Box>
       </Box>
-      <Proceed linkTo="/intro/helloworld" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

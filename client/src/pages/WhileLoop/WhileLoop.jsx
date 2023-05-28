@@ -5,7 +5,7 @@ import CodeOutput from '../../components/CodeOutput';
 import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
-function WhileLoop() {
+function WhileLoop(props) {
   return (
     <Container
       sx={{
@@ -277,7 +277,7 @@ while i < 10:
         />
       </Box>
 
-      <Proceed linkTo="/forloop" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }

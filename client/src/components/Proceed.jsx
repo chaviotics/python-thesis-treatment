@@ -16,6 +16,7 @@ function Proceed(props) {
         variant="contained"
         to={props.linkTo}
         onClick={handleProceed}
+        meme={props.meme}
       >
         Proceed
       </Button>

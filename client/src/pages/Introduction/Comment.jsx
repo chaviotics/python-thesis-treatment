@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@mui/material';
 import CodeEditorWithOutput from '../../components/CodeEditorWithOutput';
 import Proceed from '../../components/Proceed';
 
-function Comment() {
+function Comment(props) {
   return (
     <Container
       sx={{
@@ -69,7 +69,7 @@ print("Hello awesome person!")
         />
       </Box>
 
-      <Proceed linkTo="/datatypes" />
+      <Proceed linkTo={props.linkTo} />
     </Container>
   );
 }
