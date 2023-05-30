@@ -22,7 +22,16 @@ function Meme(props) {
     humorHomework,
   };
 
+  const memesSources = {
+    hackerman: `https://www.reddit.com/r/ProgrammerHumor/comments/ayogir/future_hackerman/`,
+    learningPython: `https://www.reddit.com/r/ProgrammerHumor/comments/uh6wpw/the_guy_learning_python/`,
+    techSupport: `https://www.reddit.com/r/ProgrammerHumor/comments/572hmk/snake_required_to_run_the_script/`,
+    whileLoop: `https://twitter.com/JavaScriptCoff1/status/1481292734484865031`,
+    humorHomework: `https://interestingengineering.com/culture/9-of-the-funniest-programmer-memes-right-now`,
+  };
+
   const memeContent = memes[props.memeContent];
+  const memeSource = memesSources[props.memeContent];
 
   return (
     <Container
@@ -50,11 +59,21 @@ function Meme(props) {
           alt="Meme"
         />
       </Box>
+      <Typography
+        sx={{
+          fontSize: '50%',
+          fontStyle: 'italic',
+          textAlign: 'center',
+          mt: '0.5rem',
+        }}
+      >
+        Source: {memeSource}
+      </Typography>
 
       {/* button */}
       <Button
         component={Link}
-        sx={{ alignSelf: 'center', width: '300px', mt: '4rem' }}
+        sx={{ alignSelf: 'center', width: '300px', mt: '3.6rem' }}
         size="large"
         variant="contained"
         to={props.linkTo}
