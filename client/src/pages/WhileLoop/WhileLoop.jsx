@@ -254,7 +254,8 @@ while i < 10:
         </Typography>
 
         <CodeEditorWithOutput
-          content={`# Create a variable "number" that holds the value 0.
+          content={`# ----- ACTIVITY -----
+# Create a variable "number" that holds the value 0.
 
 
 # Create the while statement with the condition: number < 10. Don't forget the colon at the end!

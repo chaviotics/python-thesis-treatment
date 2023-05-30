@@ -41,17 +41,18 @@ function Lists(props) {
         <Typography mt="4rem" mb="1rem">
           For an example, let's make a list of fruits and place in a variable
           called <code>fruits</code>. Press <code>RUN CODE</code> to check the
-          output!
+          output. Also, do the mini-activity!
         </Typography>
 
         <CodeEditorWithOutput
           content={`fruits = ["apple", "banana", "cherry"]
 
+# ----- MINI-ACTIVITY -----
 # Try printing out "fruits" list
 `}
           codeWidth={60}
           outputWidth={40}
-          height="150px"
+          height="180px"
           title="true"
         />
 
@@ -102,8 +103,8 @@ print(mixed_list)
         <Typography mb="1rem">
           Let's say we want to choose the first element of the{' '}
           <code>fruits</code> list, which is <code>apple</code>. Take note that
-          the index of the first element is <code>0</code> of the list. Try out
-          printing the 3rd element of the list!
+          the index of the first element is <code>0</code> of the list. As your
+          mini-activity, try out printing the 3rd element of the list!
         </Typography>
 
         <CodeEditorWithOutput
@@ -111,11 +112,12 @@ print(mixed_list)
 
 print(fruits[0])
 
+# ----- MINI-ACTIVITY -----
 # Try out printing the 3rd element of the list
 `}
           codeWidth={70}
           outputWidth={30}
-          height="250px"
+          height="270px"
           title="true"
         />
 
@@ -135,7 +137,6 @@ fruits[1] = "orange"
 print(fruits)
 
 # ----- MINI-ACTIVITY -----
-
 # Try changing the 1st element in the list to "mango"
 
 
@@ -163,7 +164,6 @@ fruits.append("grapes")
 print(fruits)
 
 # ----- MINI-ACTIVITY ----- 
-
 # Add "lemon" to the "fruits" list using append()
 
 
@@ -180,20 +180,23 @@ print(fruits)
           You can get the size of the list (how many items in the list) by using
           the <code>len()</code> method. You just place the <code>fruits</code>{' '}
           list inside the <code>len()</code> method, and place that inside a{' '}
-          <code>print()</code> to see its output.
+          <code>print()</code> to see its output. Do the mini-activity below as
+          well!
         </Typography>
 
         <CodeEditorWithOutput
           content={`fruits = ["apple", "banana"]
 print(len(fruits)) # Output: 2
 
-fruits.append("grapes")
+# ----- MINI-ACTIVITY -----
+# Append "grapes" in the fruits list.
+
 
 # Print out the length of fruits now!
 `}
           codeWidth={70}
           outputWidth={30}
-          height="250px"
+          height="280px"
           title="true"
         />
 
@@ -244,7 +247,8 @@ print()
         </Typography>
 
         <CodeEditorWithOutput
-          content={`# Create a list called "subjects" that contains "Math" and "CMSC".
+          content={`# ----- ACTIVITY -----
+# Create a list called "subjects" that contains "Math" and "CMSC".
 
 
 # Print the length of the list you just created.
@@ -263,7 +267,7 @@ print()
 `}
           codeWidth={70}
           outputWidth={30}
-          height="550px"
+          height="600px"
           title="true"
         />
       </Box>

@@ -93,6 +93,10 @@ function Functions(props) {
           are the arguments. Press <code>RUN CODE</code> to see the output!
         </Typography>
 
+        <Typography mt="1rem" mb="1rem">
+          Also, the mini-activity below!
+        </Typography>
+
         <CodeEditorWithOutput
           content={`def add_numbers(a, b):
     return a + b
@@ -100,11 +104,12 @@ function Functions(props) {
 result = add_numbers(1, 2)
 print(result)
 
+# ----- MINI-ACTIVITY -----
 # Use the function add_numbers(), and place in the values 419 and 68. Print its result.
 `}
           codeWidth={60}
           outputWidth={40}
-          height="320px"
+          height="350px"
           title="true"
         />
 
@@ -116,7 +121,10 @@ print(result)
         <Typography mb="1rem">
           If you don't want your function to return a value, you can simply omit
           the <code>return</code> statement. The example below shows a function
-          that prints a message to the console:
+          that prints a message to the console.
+        </Typography>
+        <Typography mt="1rem" mb="1rem">
+          Also, the mini-activity below!
         </Typography>
 
         <CodeEditorWithOutput
@@ -125,6 +133,7 @@ print(result)
 
 print_message()
 
+# ----- MINI-ACTIVITY -----
 # Try creating a for loop that calls print_message() 5 times!
 `}
           codeWidth={60}
@@ -134,7 +143,7 @@ print_message()
         />
 
         {/* Other Examples */}
-        <Typography variant="h4" mt="4rem" mb="1rem">
+        <Typography variant="h4" mt="6rem" mb="1rem">
           Other Examples
         </Typography>
         <Typography mb="2rem">
@@ -144,8 +153,27 @@ print_message()
         </Typography>
 
         {/* Example 1 */}
-        <Typography variant="h5" mt="2rem" mb="1rem">
+        <Typography variant="h5" mt="4rem" mb="1rem">
           Example 1: Using Function in a Conditional Statement:
+        </Typography>
+
+        <Typography mt="2rem">
+          In the example below, the function takes in a parameter{' '}
+          <code>number</code>. This is used inside the <code>if</code> statement
+          is used to check whether the number is even or odd within the
+          function.
+        </Typography>
+
+        <Typography mt="1rem" mb="1rem">
+          The <code>%</code> operator is used to calculate the remainder of{' '}
+          <code>number</code> divided by 2. If this remainder is equal to 0,
+          then the number is even and the function prints "The number is EVEN".
+          Otherwise, the number is odd and the function prints "The number is
+          ODD".
+        </Typography>
+
+        <Typography mt="1rem" mb="1rem">
+          Do the mini-activity below!
         </Typography>
 
         <CodeEditorWithOutput
@@ -157,33 +185,45 @@ print_message()
 
 even_or_odd(4)
 
+# ----- MINI-ACTIVITY -----
 # Try out different values such as 7, 11, 128 with the even_or_odd() function!
 
 `}
           codeWidth={60}
           outputWidth={40}
-          height="400px"
+          height="420px"
           title="true"
         />
 
-        <Typography mt="2rem">
-          In the example above, the function takes in a parameter{' '}
-          <code>number</code>. This is used inside the <code>if</code> statement
-          is used to check whether the number is even or odd within the
-          function.
-        </Typography>
-
-        <Typography mt="2rem">
-          The <code>%</code> operator is used to calculate the remainder of{' '}
-          <code>number</code> divided by 2. If this remainder is equal to 0,
-          then the number is even and the function prints "The number is EVEN".
-          Otherwise, the number is odd and the function prints "The number is
-          ODD".
-        </Typography>
-
         {/* Example 2 */}
-        <Typography variant="h5" mt="3rem" mb="1rem">
+        <Typography variant="h5" mt="4rem" mb="1rem">
           Example 2: Using Function with a List and a Loop:
+        </Typography>
+
+        <Typography mt="2rem">
+          In the example below, the <code>sum_list()</code> function takes a
+          list of numbers as input and returns the sum of all the numbers in the
+          list.
+        </Typography>
+
+        <Typography mt="1rem">
+          The function first initializes a variable called <code>total</code> to
+          0. Then, it uses a for loop to iterate over each number in the input
+          list, adding each number to the <code>total</code>. After the loop
+          finishes, the function returns the final value of <code>total</code>{' '}
+          as the output of the function.
+        </Typography>
+
+        <Typography mt="1rem">
+          The program then demonstrates how to use the <code>sum_list()</code>{' '}
+          function by calling it with the list <code>my_numbers1</code>. The
+          results are stored in a variable called <code>result1</code>. Finally,
+          the result is printed to the console using <code>print()</code> . The
+          output will be the sum of the numbers in each of the list.
+        </Typography>
+
+        <Typography mt="1rem" mb="1rem">
+          Do the mini-activity below!
         </Typography>
 
         <CodeEditorWithOutput
@@ -197,41 +237,18 @@ my_numbers1 = [1, 2, 3, 4, 5]
 result1 = sum_list(my_numbers1)
 print(result1)
 
+# ----- MINI-ACTIVITY -----
 # Create a list (of numeric values) on your own and use the sum_list() function!
 
 `}
           codeWidth={60}
           outputWidth={40}
-          height="500px"
+          height="550px"
           title="true"
         />
 
-        <Typography mt="2rem">
-          In the example above, the <code>sum_list()</code> function takes a
-          list of numbers as input and returns the sum of all the numbers in the
-          list.
-        </Typography>
-
-        <Typography mt="2rem">
-          The function first initializes a variable called <code>total</code> to
-          0. Then, it uses a for loop to iterate over each number in the input
-          list, adding each number to the <code>total</code>. After the loop
-          finishes, the function returns the final value of <code>total</code>{' '}
-          as the output of the function.
-        </Typography>
-
-        <Typography mt="2rem"></Typography>
-
-        <Typography mt="2rem">
-          The program then demonstrates how to use the <code>sum_list()</code>{' '}
-          function by calling it with the list <code>my_numbers1</code>. The
-          results are stored in a variable called <code>result1</code>. Finally,
-          the result is printed to the console using <code>print()</code> . The
-          output will be the sum of the numbers in each of the list.
-        </Typography>
-
-        <Typography mt="2rem">
-          I hope the last two examples highlight the modularity of functions,
+        <Typography mt="4rem">
+          I hope that the examples above highlight the modularity of functions,
           wherein we don't have to repeat writing the same code, and only call
           them when we need them.
         </Typography>

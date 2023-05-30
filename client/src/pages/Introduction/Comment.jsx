@@ -56,12 +56,17 @@ print("Hello awesome person!")
         </Typography>
 
         <Typography mt="4rem" mb="2rem">
-          Just for practice, comment below the last line what the title of the
-          song is. If you don't know, then comment, "I don't know".
+          Just for practice, do the mini-activity below! Comment below the last
+          line what the title of the song is. If you don't know, then comment,
+          "I don't know".
         </Typography>
 
         <CodeEditorWithOutput
-          content={`print("Is this the real life?")\nprint("Is this just fantasy?")`}
+          content={`print("Is this the real life?")\nprint("Is this just fantasy?")
+
+# ----- MINI-ACTIVITY ----- 
+# Write your comment here below
+`}
           codeWidth={60}
           outputWidth={40}
           height="300px"

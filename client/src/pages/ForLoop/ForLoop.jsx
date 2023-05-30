@@ -67,6 +67,10 @@ function ForLoop(props) {
           number.
         </Typography>
 
+        <Typography mt="1rem" mb="1rem">
+          Do the mini-activity below!
+        </Typography>
+
         <CodeEditorWithOutput
           content={`for i in range(4):
   print(i)
@@ -74,10 +78,11 @@ function ForLoop(props) {
 
 print()
 
+# ----- MINI-ACTIVITY -----
 # Try printing out the numbers from 0 to 7 using a for loop
 `}
-          codeWidth={50}
-          outputWidth={50}
+          codeWidth={60}
+          outputWidth={40}
           height="400px"
           title="true"
         />
@@ -94,6 +99,10 @@ print()
           name.
         </Typography>
 
+        <Typography mt="1rem" mb="1rem">
+          Do the mini-activity below!
+        </Typography>
+
         <CodeEditorWithOutput
           content={`fruits = ['apple', 'banana', 'cherry']
 
@@ -102,7 +111,9 @@ for fruit in fruits:
 
 print()
 
+# ----- MINI-ACTIVITY -----
 subjects = ["Math", "Science", "Filipino", "English"]
+
 # Try printing out all the contents in the "subjects" list using a for loop
 `}
           codeWidth={70}
@@ -121,6 +132,10 @@ subjects = ["Math", "Science", "Filipino", "English"]
           the string and print it.
         </Typography>
 
+        <Typography mt="1rem" mb="1rem">
+          Do the mini-activity below!
+        </Typography>
+
         <CodeEditorWithOutput
           content={`word = "Python"
 
@@ -129,7 +144,9 @@ for letter in word:
 
 print()
 
+# ----- MINI-ACTIVITY -----
 string = "abcde12345!@#$%"
+
 # Try printing out all the contents in the "string" variable using a for loop
 `}
           codeWidth={60}

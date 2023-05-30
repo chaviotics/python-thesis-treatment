@@ -117,15 +117,21 @@ function DataTypes(props) {
         <Typography mt="2rem" mb="1rem">
           In Python, you can check the data type of the value by using the
           built-in function <code>type()</code>. To see its output, place it in
-          a <code>print()</code> such as the first example below. Try out
-          checking the data type for the values of <code>6.9</code>,{' '}
-          <code>True</code> and <code>420</code> in the code editor below.
+          a <code>print()</code> such as the first example in the interactive
+          code editor below.
+        </Typography>
+
+        <Typography mb="1rem">
+          Do the mini-activity in the interactive code editor! Try out checking
+          the data type for the values of <code>6.9</code>, <code>True</code>{' '}
+          and <code>420</code>.
         </Typography>
 
         <CodeEditorWithOutput
           content={`# Below is the data type of "hello" 
 print(type("hello")) 
 
+# ----- MINI-ACTIVITY -----
 # Check the type of 6.9
 
 

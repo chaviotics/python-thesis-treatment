@@ -68,7 +68,8 @@ print(name)
         {/* Using type() */}
         <Typography mt="4rem" mb="1rem">
           You can use the <code>type()</code> function to find out the data type
-          of a variable or a value. For example:
+          of a variable or a value. Press <code>RUN CODE</code> to see the
+          output below. Furthermore, do the mini-activity!
         </Typography>
 
         <CodeEditorWithOutput
@@ -120,46 +121,27 @@ height_in_m = 1.8
         </Typography>
 
         <Typography mt="2rem" mb="1rem">
-          For example, consider the following code:
+          For example, consider the following code below, and press{' '}
+          <code>RUN CODE</code> to see the output!
         </Typography>
 
-        <Box
-          sx={{
-            mt: '1rem',
-            mb: '1rem',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem',
-          }}
-        >
-          <CodeEditor
-            content={`name = "Isaac"
+        <CodeEditorWithOutput
+          content={`name = "Isaac"
 age = 25
 print(f"My name is {name} and I am {age} years old.")
 `}
-            height="150px"
-            width="100%"
-            title="true"
-          />
+          codeWidth={70}
+          outputWidth={30}
+          height="180px"
+          title="true"
+        />
 
-          <Typography mt="1rem" mb="1rem">
-            In code above, the f-string is used to embed the variables{' '}
-            <code>name</code> and <code>age</code> within the string. The
-            expressions inside the curly braces are evaluated at runtime and the
-            resulting values are formatted into the string.
-          </Typography>
-
-          <Typography mt="1rem" mb="rem">
-            When the code is executed, the output will be:
-          </Typography>
-
-          <CodeOutput
-            content={`My name is Isaac and I am 25 years old.`}
-            height="150px"
-            width="100%"
-            title="true"
-          />
-        </Box>
+        <Typography mt="2rem" mb="1rem">
+          In code above, the f-string is used to embed the variables{' '}
+          <code>name</code> and <code>age</code> within the string. The
+          expressions inside the curly braces are evaluated at runtime and the
+          resulting values are formatted into the string.
+        </Typography>
 
         <Typography mt="4rem" mb="4rem">
           Formatted strings can also include expressions that call functions or
@@ -170,15 +152,17 @@ print(f"My name is {name} and I am {age} years old.")
         </Typography>
 
         <Typography mb="2rem">
-          Now, try out using f-strings by printing out this statement:{' '}
+          Now, practice formatted strings with the mini-activity below. Print
+          out this statement:{' '}
           <strong>
             "Edith is currently studying in The University of the Philippines"
           </strong>{' '}
-          using the variables below.
+          using f-strings and with the given variables below.
         </Typography>
 
         <CodeEditorWithOutput
-          content={`name = "Edith"
+          content={`# ----- MINI-ACTIVITY -----
+name = "Edith"
 school = "The University of the Philippines"
 
 # Code your print() statement with f-string below here

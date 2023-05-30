@@ -96,16 +96,18 @@ print(f"3 ** 2 = {exp}")
         {/* Example */}
 
         <Typography mt="4rem" mb="2rem">
-          Try getting the value of <code>1 + 2 - 3 * 4 / 5 ** 6</code>! Place it
-          in the <code>print()</code> in the interactive code editor below.
+          Do the mini-activity below! Try getting the value of{' '}
+          <code>1 + 2 - 3 * 4 / 5 ** 6</code>! Place it in the{' '}
+          <code>print()</code> in the interactive code editor below.
         </Typography>
 
         <CodeEditorWithOutput
-          content={`
+          content={`# ----- MINI-ACTIVITY -----
+# Print the value of 1 + 2 - 3 * 4 / 5 ** 6.
 `}
           codeWidth={70}
           outputWidth={30}
-          height="120px"
+          height="180px"
           title="true"
         />
 

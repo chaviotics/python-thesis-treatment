@@ -92,7 +92,9 @@ if age >= 18:
           greater than or equal to 18. If it is, the code inside the{' '}
           <code>if</code> statement will be executed and the message "You are
           old enough to vote." will be printed.{' '}
-          <em>Check out what happens when age is less than 18!</em>
+          <em>
+            Check out what happens when age is less than 18 (ex. 1, 9, 17)!
+          </em>
         </Typography>
 
         {/* 2nd Example */}
@@ -167,7 +169,8 @@ else:
         {/* Activity */}
 
         <Typography mt="4rem" mb="2rem">
-          Now, apply your skills in the activity below!
+          Now, apply your skills in the activity in the interactive code editor
+          below!
         </Typography>
 
         <Typography fontWeight="bold" variant="h5" mb="1rem">
@@ -176,7 +179,10 @@ else:
         <Typography mb="1rem">
           Create a program that compares the two numeric variables{' '}
           <code>x</code> and <code>y</code> and prints out which number is
-          greater. An example output would be "x is greater than y".
+          greater. There should be 3 outputs: (1){' '}
+          <strong>"x is greater than y."</strong>, (2)
+          <strong>"x is less than y."</strong>, and (3){' '}
+          <strong>"x is equal to y"</strong>.
         </Typography>
 
         <Typography mb="2rem">
@@ -187,7 +193,9 @@ else:
         </Typography>
 
         <CodeEditorWithOutput
-          content={`x = 1
+          content={` # ----- ACTIVITY -----
+# You can change the x and y values to check your work
+x = 1
 y = 2
 
 # Write your conditional statements below here
