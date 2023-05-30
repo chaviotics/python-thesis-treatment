@@ -111,12 +111,31 @@ print(f"3 ** 2 = {exp}")
           title="true"
         />
 
-        {/* Shorthand Operators */}
+        {/* Variable Updates with Arithmetic Operations & Shorthand Operators */}
         <Typography mt="6rem" textAlign="center" variant="h3">
-          Shorthand Operators
+          Variable Updates with Arithmetic Operations <br /> & Shorthand
+          Operators
         </Typography>
 
         <Typography mt="2rem" mb="1rem">
+          Variable updates involve modifying the value of a variable using
+          arithmetic operations and assigning the result back to the variable.
+          Take a look at the code below and press <code>RUN CODE</code>!
+        </Typography>
+
+        <CodeEditorWithOutput
+          content={`x = 5
+x = x + 1  # Increment x by 1
+
+print(x)
+`}
+          codeWidth={60}
+          outputWidth={40}
+          height="150px"
+          title="true"
+        />
+
+        <Typography mt="4rem" mb="1rem">
           In Python, shorthand operators are used to combine an arithmetic
           operation and an assignment in a single step. They are useful for
           writing more concise and readable code.
@@ -176,26 +195,21 @@ print(x)
         </Typography>
 
         <Typography mt="4rem">
-          Here are other examples. Do the mini-activity below!
+          For practice, do the mini-activity below!
         </Typography>
 
         <CodeEditorWithOutput
-          content={`y = 10
-y -= 5  # shorthand operator for y = y - 5
-print(y)
-
-# ----- MINI-ACTIVITY -----
+          content={`# ----- MINI-ACTIVITY -----
 z = 2
 
-# Multiply the value of z with 3 
-# using the shorthand operator 
+# Do variable update by multiplying the value of z with 3 using the shorthand operator of z = z * 3
 
 
 print(z)
 `}
           codeWidth={70}
           outputWidth={30}
-          height="360px"
+          height="300px"
           title="true"
         />
 
