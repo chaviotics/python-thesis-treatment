@@ -143,6 +143,18 @@ while count > 0:
           I try to do an infinite loop, it would cause a crash in this web page!
         </Typography>
 
+        <Typography
+          sx={{ border: '2px solid #ccc', borderRadius: '16px', p: '16px' }}
+          mt="1rem"
+          mb="1rem"
+        >
+          In the case that you accidentally created an{' '}
+          <code>infinite loop</code> and your browser is
+          crashing/lagging/freezing, refresh your browser. It may take a while,
+          but be patient! A popup will show that the page is unresponsive, and
+          then click "Exit Page". Lastly, refresh your web browser again.
+        </Typography>
+
         {/* Break & Continue Statements */}
 
         <Typography mt="6rem" mb="2rem" variant="h3" textAlign="center">
@@ -244,12 +256,13 @@ while i < 10:
         <Typography mb="1rem">
           Create a program that prints even numbers from 0 to 10 using a{' '}
           <code>while</code> loop. Follow along the comments inside the
-          interactive code editor.
+          interactive code editor.{' '}
         </Typography>
 
         <Typography mb="1rem">
           <em>
             Hint: Mind the indentation, and place the code below the comments.
+            Also, do not attempt to create an <code>infinite loop</code>!
           </em>
         </Typography>
 
