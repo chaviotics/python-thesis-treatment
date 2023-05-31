@@ -72,6 +72,19 @@ print("Hello awesome person!")
           height="300px"
           title="true"
         />
+
+        <Typography mt="4rem" mb="2rem" fontStyle="italic">
+          Note:{' '}
+          <strong>
+            <u>Mini-activities</u>
+          </strong>{' '}
+          and{' '}
+          <strong>
+            <u>activities</u>
+          </strong>{' '}
+          throughout this tutorial are not mandatory, but they are strongly
+          recommended to enhance your learning experience.
+        </Typography>
       </Box>
 
       <Proceed linkTo={props.linkTo} />
