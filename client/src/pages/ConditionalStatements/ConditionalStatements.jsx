@@ -193,7 +193,7 @@ else:
         </Typography>
 
         <CodeEditorWithOutput
-          content={` # ----- ACTIVITY -----
+          content={`# ----- ACTIVITY -----
 # You can change the x and y values to check your work
 x = 1
 y = 2
